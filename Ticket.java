@@ -58,7 +58,7 @@ public class Ticket
 			OutputStreamWriter wr= new OutputStreamWriter(connection.getOutputStream()); 
 			wr.write(body); 
 			wr.flush(); //Get the response from the QPS BufferedReader 
-			in = new BufferedReader(new InputStreamReader(connection.getInputStream())); 
+			BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream())); 
 			StringBuilder builder = new StringBuilder(); 
 			String inputLine; 
 			while ((inputLine = in.readLine()) != null) 
